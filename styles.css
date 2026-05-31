@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    height: 100vh;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -18,6 +24,8 @@
     padding-left: 40px;
     padding-top: 10px;
     padding-bottom: 20px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .row1,
@@ -41,7 +49,7 @@
 
 .right button {
     padding: 5px 20px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .greet {
@@ -69,6 +77,8 @@
 input {
     width: 400px;
     border-radius: 10px;
+    color: black;
+    opacity: 1;
 }
 
 
@@ -90,7 +100,13 @@ input {
     align-items: center;
     justify-content: left;
     gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
     /* margin-left: 5px; */
+}
+
+.set:hover {
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .sidebar .item1 {
@@ -107,17 +123,18 @@ input {
     width: 80px;
 }
 
+
 /* Main */
 .main {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    background-color: rgb(247, 247, 247);
 }
 
 .yourprojects {
     display: flex;
     flex-direction: column;
     /* gap: 10px; */
-    background-color: rgb(247, 247, 247);
 }
 
 .yourprojects p {
@@ -136,40 +153,77 @@ input {
 .project {
     width: calc(50% - 50px);
     height: 170px;
-    border: 1px solid black;
-    box-shadow: inset;
-    border-left: 6px solid #ffb5ab;
-    border-radius: 5%;
+
+    background-color: white;
+    border-radius: 10px;
     padding: 20px;
+    border-left: 6px solid #ffb5ab;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
+
+.extra {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.extra .title {
+    font-size: 30px;
+    font-weight: bold;
+    /* margin-left: 10px; */
+}
+
+.extra .box {
+    /* margin-left: 10px; */
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 65%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background-color: white;
+}
+
+
+
+
 
 /* COLOUR */
 .sidebar,
 button {
     background-color: #e39A7b;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 button:hover,
 button:focus {
     background-color: #aa4c24;
+    transform: translateY(-1px);
 }
 
 input {
     background-color: rgb(169, 163, 163);
-    border: 2px solid black;
-    opacity: 30%;
+    opacity: 50%;
+    /* border: 2px solid black; */
     padding-left: 10px;
     font-size: 15px;
 }
 
-input:hover {
-    opacity: 50%;
+input:hover,
+input:focus {
+    opacity: 1;
+    background-color: rgb(206, 199, 199);
+
 }
 
-.sidebar p {
-    font: bold;
+.sidebar a {
     color: white;
     font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    gap: 10px;
 }
 
 .sidebar .logo p {
